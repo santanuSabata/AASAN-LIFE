@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4 lg:gap-8 h-16">
+        <div className="flex items-center justify-between gap-4 lg:gap-8 h-16 lg:h-[72px]">
           {/* Left: AASAN LIFE Logo */}
           <a
             href="#home"

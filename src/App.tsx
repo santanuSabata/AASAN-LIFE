@@ -10,6 +10,8 @@ import { EnquiryForm } from './components/EnquiryForm';
 import { FAQSection } from './components/FAQSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
+import { FloatingActions } from './components/FloatingActions';
+import { InternshipModal } from './components/InternshipModal';
 
 export default function App() {
   return (
@@ -28,6 +30,8 @@ export default function App() {
         <FinalCTA />
       </main>
       <Footer />
+      <FloatingActions />
+      <InternshipModal />
     </div>
   );
 }
