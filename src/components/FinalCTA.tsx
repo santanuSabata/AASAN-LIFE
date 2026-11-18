@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { AppLink } from '../context/RouterContext';
 
 export const FinalCTA: React.FC = () => {
   return (
@@ -33,13 +34,13 @@ export const FinalCTA: React.FC = () => {
               insurance industry with AASAN LIFE.
             </p>
 
-            <a
-              href="#enquiry-form"
+            <AppLink
+              to="/contact-us"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-bold text-[#0A2055] bg-[#FF851B] hover:bg-white rounded-lg transition-colors duration-150 shadow-[0_8px_22px_rgba(0,0,0,0.2)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF851B]"
             >
               <span>Enquire Now</span>
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </a>
+            </AppLink>
           </div>
         </div>
       </div>

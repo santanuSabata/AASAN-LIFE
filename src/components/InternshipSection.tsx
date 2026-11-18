@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Check, Laptop, Shield, Layers, Award } from 'lucide-react';
+import { AppLink } from '../context/RouterContext';
 
 const PROGRAMME_HIGHLIGHTS = [
   { label: 'Online Training', icon: Laptop },
@@ -125,13 +126,13 @@ export const InternshipSection: React.FC = () => {
                   ))}
                 </dl>
 
-                <a
-                  href="#enquiry-form"
+                <AppLink
+                  to="/contact-us"
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-semibold text-white bg-[#1455D9] hover:bg-[#0A2055] rounded-lg transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
                 >
                   <span>Enquire About Programme</span>
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                </a>
+                </AppLink>
               </div>
             </div>
           </div>

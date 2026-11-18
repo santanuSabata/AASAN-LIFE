@@ -9,6 +9,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { EnquiryFormFields } from './EnquiryFormFields';
+import { AppLink } from '../context/RouterContext';
 
 const HERO_ILLUSTRATION_PATH = '/src/assets/images/hero_insurance_learning_1794917031234.jpg';
 
@@ -117,21 +118,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenModal }) => {
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </button>
               ) : (
-                <a
-                  href="#enquiry-form"
+                <AppLink
+                  to="/contact-us"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-semibold text-white bg-[#1455D9] hover:bg-[#0A2055] rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0 shadow-[0_6px_20px_rgba(20,85,217,0.24)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
                 >
                   <span>Apply for Internship</span>
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                </a>
+                </AppLink>
               )}
 
-              <a
-                href="#internship-programme"
+              <AppLink
+                to="/internship-program"
                 className="inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-[#0A2055] bg-white hover:bg-[#F5F8FC] border border-[#0A2055]/20 hover:border-[#1455D9]/40 rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
               >
                 Explore Programme
-              </a>
+              </AppLink>
             </div>
           </div>
 

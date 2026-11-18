@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   ArrowRight,
 } from 'lucide-react';
+import { AppLink } from '../context/RouterContext';
 
 interface BenefitItem {
   title: string;
@@ -90,13 +91,13 @@ export const BenefitsSection: React.FC = () => {
               </p>
             </div>
 
-            <a
-              href="#enquiry-form"
+            <AppLink
+              to="/contact-us"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm sm:text-base font-bold text-[#0A2055] bg-[#FF851B] hover:bg-white rounded-lg transition-colors whitespace-nowrap shrink-0"
             >
               <span>Request Programme Info</span>
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </a>
+            </AppLink>
           </div>
         </div>
       </div>

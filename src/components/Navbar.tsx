@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, ShieldCheck, ArrowRight } from 'lucide-react';
 import { COMPANY_CONFIG, NAV_ITEMS } from '../config/company';
+import { AppLink, useAppRouter } from '../context/RouterContext';
 import { BrandLogo } from './BrandLogo';
 
 interface NavbarProps {
@@ -10,6 +11,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { currentPath } = useAppRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,24 +31,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
     !COMPANY_CONFIG.contact.phoneDisplay.includes('[ADD');
 
   return (
-    <header className="sticky top-0 z-50 w-full">
+    <header className="sticky top-0 z-40 w-full">
       {/* Slim Top Utility Bar (Desktop & Tablet) */}
       <div className="hidden sm:block bg-[#0A2055] text-white text-xs border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center justify-between gap-4">
           <div className="flex items-center gap-4 min-w-0">
-            <a
-              href={
-                phoneIsConfigured
-                  ? `tel:${COMPANY_CONFIG.contact.phoneDisplay.replace(/\s+/g, '')}`
-                  : '#contact'
-              }
-              className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#FF851B] transition-colors whitespace-nowrap shrink-0"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#FF851B]" aria-hidden="true" />
-              <span>
-                Enquiry Desk: {COMPANY_CONFIG.contact.phoneDisplay}
-              </span>
-            </a>
+            {phoneIsConfigured ? (
+              <a
+                href={`tel:${COMPANY_CONFIG.contact.phoneDisplay.replace(/\s+/g, '')}`}
+                className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#FF851B] transition-colors whitespace-nowrap shrink-0"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#FF851B]" aria-hidden="true" />
+                <span>Enquiry Desk: {COMPANY_CONFIG.contact.phoneDisplay}</span>
+              </a>
+            ) : (
+              <AppLink
+                to="/contact-us"
+                className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#FF851B] transition-colors whitespace-nowrap shrink-0"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#FF851B]" aria-hidden="true" />
+                <span>Enquiry Desk: {COMPANY_CONFIG.contact.phoneDisplay}</span>
+              </AppLink>
+            )}
             <span className="hidden md:inline text-white/30" aria-hidden="true">
               |
             </span>
@@ -63,13 +69,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
             <span className="text-white/30" aria-hidden="true">
               ·
             </span>
-            <a
-              href="#enquiry-form"
+            <AppLink
+              to="/contact-us"
               className="inline-flex items-center gap-1 font-semibold text-white hover:text-[#FF851B] transition-colors whitespace-nowrap"
             >
               <span>Enquire Now</span>
               <ArrowRight className="w-3 h-3" aria-hidden="true" />
-            </a>
+            </AppLink>
           </div>
         </div>
       </div>
@@ -85,28 +91,37 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 lg:gap-8 h-16 lg:h-[72px]">
             {/* Left: AASAN LIFE Official Logo */}
-            <a
-              href="#home"
+            <AppLink
+              to="/"
               aria-label="AASAN LIFE Home"
+              onClick={handleLinkClick}
               className="inline-flex items-center shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1455D9] rounded-md"
             >
               <BrandLogo variant="dark" />
-            </a>
+            </AppLink>
 
             {/* Center/Right Desktop Navigation */}
             <nav
               aria-label="Primary Navigation"
               className="hidden lg:flex items-center gap-5 xl:gap-6 text-[13.5px] xl:text-sm font-medium text-[#17233D]"
             >
-              {NAV_ITEMS.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="relative py-1 whitespace-nowrap shrink-0 text-[#17233D]/85 hover:text-[#1455D9] transition-colors duration-150 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-[#FF851B] hover:after:w-full after:transition-all after:duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1455D9] rounded-xs"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const isActive = currentPath === item.href;
+                return (
+                  <AppLink
+                    key={item.href}
+                    to={item.href}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={`relative py-1 whitespace-nowrap shrink-0 transition-colors duration-150 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:transition-all after:duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1455D9] rounded-xs ${
+                      isActive
+                        ? 'text-[#1455D9] font-semibold after:w-full after:bg-[#FF851B]'
+                        : 'text-[#17233D]/85 hover:text-[#1455D9] after:w-0 after:bg-[#FF851B] hover:after:w-full'
+                    }`}
+                  >
+                    {item.label}
+                  </AppLink>
+                );
+              })}
             </nav>
 
             {/* Right: Primary CTA + Mobile Toggle */}
@@ -120,12 +135,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
                   <span>Apply for Internship</span>
                 </button>
               ) : (
-                <a
-                  href="#enquiry-form"
+                <AppLink
+                  to="/contact-us"
                   className="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white bg-[#1455D9] hover:bg-[#0A2055] rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0 shadow-[0_2px_10px_rgba(20,85,217,0.22)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
                 >
                   Apply for Internship
-                </a>
+                </AppLink>
               )}
 
               <button
@@ -152,24 +167,45 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
               aria-label="Mobile Navigation"
               className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1"
             >
-              {NAV_ITEMS.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={handleLinkClick}
-                  className="px-3 py-3 text-base font-medium text-[#17233D] hover:text-[#1455D9] hover:bg-[#F5F8FC] rounded-lg transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const isActive = currentPath === item.href;
+                return (
+                  <AppLink
+                    key={item.href}
+                    to={item.href}
+                    onClick={handleLinkClick}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={`px-3 py-3 text-base rounded-lg transition-colors ${
+                      isActive
+                        ? 'font-bold text-[#1455D9] bg-[#F5F8FC]'
+                        : 'font-medium text-[#17233D] hover:text-[#1455D9] hover:bg-[#F5F8FC]'
+                    }`}
+                  >
+                    {item.label}
+                  </AppLink>
+                );
+              })}
               <div className="pt-3 mt-2 border-t border-[#0A2055]/10">
-                <a
-                  href="#enquiry-form"
-                  onClick={handleLinkClick}
-                  className="w-full inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-white bg-[#1455D9] hover:bg-[#0A2055] rounded-lg transition-colors"
-                >
-                  Apply for Internship
-                </a>
+                {onOpenModal ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      handleLinkClick();
+                      onOpenModal();
+                    }}
+                    className="w-full inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-white bg-[#1455D9] hover:bg-[#0A2055] rounded-lg transition-colors"
+                  >
+                    Apply for Internship
+                  </button>
+                ) : (
+                  <AppLink
+                    to="/contact-us"
+                    onClick={handleLinkClick}
+                    className="w-full inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-white bg-[#1455D9] hover:bg-[#0A2055] rounded-lg transition-colors"
+                  >
+                    Apply for Internship
+                  </AppLink>
+                )}
               </div>
             </nav>
           </div>

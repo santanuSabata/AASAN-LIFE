@@ -69,17 +69,22 @@ export const COMPANY_CONFIG: CompanyConfig = {
 
 export interface NavItem {
   label: string;
-  href: string;
+  href:
+    | '/'
+    | '/about-us'
+    | '/internship-program'
+    | '/what-you-learn'
+    | '/benefits'
+    | '/contact-us';
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Internship Programme', href: '#internship-programme' },
-  { label: "What You'll Learn", href: '#curriculum' },
-  { label: 'Benefits', href: '#benefits' },
-  { label: 'FAQs', href: '#faqs' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about-us' },
+  { label: 'Internship Program', href: '/internship-program' },
+  { label: 'What You Learn', href: '/what-you-learn' },
+  { label: 'Benefits', href: '/benefits' },
+  { label: 'Contact Us', href: '/contact-us' },
 ];
 
 export interface ParticipantStory {

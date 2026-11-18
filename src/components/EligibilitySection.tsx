@@ -8,6 +8,7 @@ import {
   Search,
   Shield,
 } from 'lucide-react';
+import { AppLink } from '../context/RouterContext';
 
 interface AudienceSegment {
   id: string;
@@ -252,13 +253,13 @@ export const EligibilitySection: React.FC = () => {
                   </p>
                 </div>
 
-                <a
-                  href="#enquiry-form"
+                <AppLink
+                  to="/contact-us"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm sm:text-base font-semibold text-white bg-[#1455D9] hover:bg-[#0A2055] rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0 shadow-[0_6px_18px_rgba(20,85,217,0.22)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
                 >
                   <span>Start Your Journey</span>
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                </a>
+                </AppLink>
               </div>
             </div>
           </div>
