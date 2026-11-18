@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
 import { EnquiryFormFields } from './EnquiryFormFields';
 
-export const InternshipModal: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true);
+interface InternshipModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
 
+export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (!isOpen) return;
 
@@ -13,7 +16,7 @@ export const InternshipModal: React.FC = () => {
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        setIsOpen(false);
+        onClose();
       }
     };
 
@@ -22,7 +25,7 @@ export const InternshipModal: React.FC = () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -32,7 +35,7 @@ export const InternshipModal: React.FC = () => {
       aria-modal="true"
       aria-labelledby="internship-modal-title"
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0A2055]/65 backdrop-blur-xs"
-      onClick={() => setIsOpen(false)}
+      onClick={onClose}
     >
       <div
         className="w-full max-w-2xl bg-white rounded-2xl border border-[#0A2055]/15 shadow-[0_24px_60px_rgba(10,32,85,0.28)] overflow-hidden max-h-[92vh] flex flex-col"
@@ -57,7 +60,7 @@ export const InternshipModal: React.FC = () => {
           </div>
           <button
             type="button"
-            onClick={() => setIsOpen(false)}
+            onClick={onClose}
             aria-label="Close internship enquiry modal"
             className="w-10 h-10 inline-flex items-center justify-center rounded-lg text-white/85 hover:text-white hover:bg-white/12 transition-colors shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF851B]"
           >
