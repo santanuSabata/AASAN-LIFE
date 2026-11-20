@@ -51,12 +51,12 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-5">
             <AppLink
               to="/"
-              aria-label="AASAN LIFE Home"
+              aria-label="AASAN BIMA EDUCATION Home"
               className="inline-flex items-center mb-3"
             >
               <BrandLogo variant="light" />
             </AppLink>
-            <p className="text-sm font-semibold text-[#FF851B] mb-3">
+            <p className="text-sm font-semibold text-[#E4B052] mb-3">
               {COMPANY_CONFIG.tagline}
             </p>
             <p className="text-sm text-white/75 leading-relaxed max-w-sm mb-6">
@@ -66,7 +66,7 @@ export const Footer: React.FC = () => {
             {/* Social Media Bar */}
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-white/70 mb-3">
-                Follow AASAN LIFE
+                Follow AASAN BIMA EDUCATION
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 {socialChannels.map((channel) =>
@@ -76,9 +76,9 @@ export const Footer: React.FC = () => {
                       href={channel.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`AASAN LIFE on ${channel.name}`}
+                      aria-label={`AASAN BIMA EDUCATION on ${channel.name}`}
                       title={channel.name}
-                      className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/10 border border-white/15 text-sm font-medium text-white hover:bg-[#1455D9] hover:border-[#1455D9] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF851B]"
+                      className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/10 border border-white/15 text-sm font-medium text-white hover:bg-[#1455D9] hover:border-[#1455D9] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E4B052]"
                     >
                       {channel.icon}
                       <span>{channel.name}</span>
@@ -94,16 +94,16 @@ export const Footer: React.FC = () => {
                       }
                       aria-label={`${channel.name} profile placeholder`}
                       title={`${channel.name}: ${channel.placeholder}`}
-                      className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/8 border border-white/15 text-sm font-medium text-white/85 hover:bg-white/15 hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF851B]"
+                      className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/8 border border-white/15 text-sm font-medium text-white/85 hover:bg-white/15 hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E4B052]"
                     >
-                      <span className="text-[#FF851B]">{channel.icon}</span>
+                      <span className="text-[#E4B052]">{channel.icon}</span>
                       <span>{channel.name}</span>
                     </button>
                   )
                 )}
               </div>
               {socialNotice && (
-                <p className="mt-2.5 text-xs text-[#FF851B] leading-relaxed" role="status">
+                <p className="mt-2.5 text-xs text-[#E4B052] leading-relaxed" role="status">
                   {socialNotice}
                 </p>
               )}
@@ -120,7 +120,7 @@ export const Footer: React.FC = () => {
                 <li key={link.href}>
                   <AppLink
                     to={link.href}
-                    className="hover:text-[#FF851B] transition-colors inline-block py-0.5"
+                    className="hover:text-[#E4B052] transition-colors inline-block py-0.5"
                   >
                     {link.label}
                   </AppLink>
@@ -136,7 +136,7 @@ export const Footer: React.FC = () => {
             </h2>
             <ul className="space-y-3 text-sm text-white/80">
               <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-[#FF851B] shrink-0 mt-0.5" aria-hidden="true" />
+                <Phone className="w-4 h-4 text-[#E4B052] shrink-0 mt-0.5" aria-hidden="true" />
                 <span>
                   <strong className="font-semibold text-white">Phone:</strong>{' '}
                   {COMPANY_CONFIG.contact.phoneDisplay}
@@ -144,7 +144,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MessageCircle
-                  className="w-4 h-4 text-[#FF851B] shrink-0 mt-0.5"
+                  className="w-4 h-4 text-[#E4B052] shrink-0 mt-0.5"
                   aria-hidden="true"
                 />
                 <span>
@@ -153,14 +153,14 @@ export const Footer: React.FC = () => {
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-[#FF851B] shrink-0 mt-0.5" aria-hidden="true" />
+                <Mail className="w-4 h-4 text-[#E4B052] shrink-0 mt-0.5" aria-hidden="true" />
                 <span>
                   <strong className="font-semibold text-white">Email:</strong>{' '}
                   {COMPANY_CONFIG.contact.emailDisplay}
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#FF851B] shrink-0 mt-0.5" aria-hidden="true" />
+                <MapPin className="w-4 h-4 text-[#E4B052] shrink-0 mt-0.5" aria-hidden="true" />
                 <span>
                   <strong className="font-semibold text-white">Address:</strong>{' '}
                   {COMPANY_CONFIG.contact.addressDisplay}
@@ -172,7 +172,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar linking to dedicated Legal Pages */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-white/70">
-          <p>Copyright © 2026 AASAN LIFE. All Rights Reserved.</p>
+          <p>Copyright © 2026 AASAN BIMA EDUCATION. All Rights Reserved.</p>
           <div className="flex items-center gap-6">
             <AppLink
               to="/privacy-policy"

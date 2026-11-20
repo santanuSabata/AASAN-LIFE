@@ -18,11 +18,11 @@ export interface ChatMessage {
 const WELCOME_MESSAGE: ChatMessage = {
   id: 'welcome',
   role: 'model',
-  text: "Hello! I'm the AASAN LIFE Programme & Insurance Learning Advisor. Ask me about our Online Paid Internship Programme, the 6 insurance learning modules, who can apply, or how to submit an enquiry.",
+  text: "Hello! I'm the AASAN BIMA EDUCATION Programme & Insurance Learning Advisor. Ask me about our Online Paid Internship Programme, the 6 insurance learning modules, who can apply, or how to submit an enquiry.",
 };
 
 const STARTER_PROMPTS = [
-  'What is the AASAN LIFE Paid Internship Programme?',
+  'What is the AASAN BIMA EDUCATION Paid Internship Programme?',
   'What topics are covered in Corporate Insurance?',
   'Who is eligible to apply for the internship?',
   'How do I enquire and get fee or duration details?',
@@ -113,7 +113,7 @@ export const AasanChatWidget: React.FC<AasanChatWidgetProps> = ({ isOpen, onClos
       setError(
         err instanceof Error
           ? err.message
-          : 'Unable to connect to the AASAN LIFE Advisor right now.'
+          : 'Unable to connect to the AASAN BIMA EDUCATION Advisor right now.'
       );
     } finally {
       setIsLoading(false);
@@ -139,17 +139,17 @@ export const AasanChatWidget: React.FC<AasanChatWidgetProps> = ({ isOpen, onClos
     <div
       role="dialog"
       aria-modal="false"
-      aria-label="AASAN LIFE Gemini Advisor Chat"
+      aria-label="AASAN BIMA EDUCATION Gemini Advisor Chat"
       className="fixed bottom-24 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[400px] h-[520px] max-h-[76vh] bg-white rounded-2xl border border-[#0A2055]/15 shadow-[0_20px_56px_rgba(10,32,85,0.26)] flex flex-col overflow-hidden"
     >
       {/* Header */}
       <div className="px-4 py-3.5 bg-[#0A2055] text-white flex items-center justify-between gap-3 shrink-0">
         <div className="flex items-center gap-3 min-w-0">
           <div className="w-9 h-9 rounded-lg bg-[#1455D9] flex items-center justify-center shrink-0">
-            <Bot className="w-5 h-5 text-[#FF851B]" aria-hidden="true" />
+            <Bot className="w-5 h-5 text-[#E4B052]" aria-hidden="true" />
           </div>
           <div className="min-w-0">
-            <h2 className="text-sm font-bold text-white truncate">AASAN LIFE Advisor</h2>
+            <h2 className="text-sm font-bold text-white truncate">AASAN BIMA EDUCATION Advisor</h2>
             <p className="text-[11px] text-white/75 truncate">
               Programme &amp; Insurance Learning Guide
             </p>
@@ -170,7 +170,7 @@ export const AasanChatWidget: React.FC<AasanChatWidgetProps> = ({ isOpen, onClos
             type="button"
             onClick={onClose}
             title="Close chat"
-            aria-label="Close AASAN LIFE Advisor"
+            aria-label="Close AASAN BIMA EDUCATION Advisor"
             className="w-8 h-8 rounded-lg text-white/75 hover:text-white hover:bg-white/12 inline-flex items-center justify-center transition-colors"
           >
             <X className="w-4 h-4" aria-hidden="true" />
@@ -190,7 +190,7 @@ export const AasanChatWidget: React.FC<AasanChatWidgetProps> = ({ isOpen, onClos
               <div
                 aria-hidden="true"
                 className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                  isUser ? 'bg-[#1455D9] text-white' : 'bg-[#0A2055] text-[#FF851B]'
+                  isUser ? 'bg-[#1455D9] text-white' : 'bg-[#0A2055] text-[#E4B052]'
                 }`}
               >
                 {isUser ? <User className="w-3.5 h-3.5" /> : <Bot className="w-3.5 h-3.5" />}
@@ -233,7 +233,7 @@ export const AasanChatWidget: React.FC<AasanChatWidgetProps> = ({ isOpen, onClos
           <div className="flex items-start gap-2.5">
             <div
               aria-hidden="true"
-              className="w-7 h-7 rounded-full bg-[#0A2055] text-[#FF851B] flex items-center justify-center shrink-0"
+              className="w-7 h-7 rounded-full bg-[#0A2055] text-[#E4B052] flex items-center justify-center shrink-0"
             >
               <Bot className="w-3.5 h-3.5" />
             </div>
@@ -263,7 +263,7 @@ export const AasanChatWidget: React.FC<AasanChatWidgetProps> = ({ isOpen, onClos
         className="p-3 bg-white border-t border-[#0A2055]/10 flex items-center gap-2 shrink-0"
       >
         <label htmlFor="aasan-chat-input" className="sr-only">
-          Ask a question about AASAN LIFE
+          Ask a question about AASAN BIMA EDUCATION
         </label>
         <input
           ref={inputRef}

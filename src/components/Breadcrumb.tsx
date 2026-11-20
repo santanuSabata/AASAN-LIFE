@@ -91,11 +91,11 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
 
   const isDark = variant === 'dark';
   const linkClass = isDark
-    ? 'inline-flex items-center gap-1.5 text-white/75 hover:text-[#FF851B] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF851B] rounded-xs'
+    ? 'inline-flex items-center gap-1.5 text-white/75 hover:text-[#E4B052] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E4B052] rounded-xs'
     : 'inline-flex items-center gap-1.5 text-[#17233D]/70 hover:text-[#1455D9] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9] rounded-xs';
   const separatorClass = isDark ? 'text-white/40' : 'text-[#0A2055]/30';
   const currentClass = isDark
-    ? 'font-semibold text-[#FF851B]'
+    ? 'font-semibold text-[#E4B052]'
     : 'font-semibold text-[#0A2055]';
 
   return (

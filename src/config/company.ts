@@ -1,5 +1,5 @@
 /**
- * Central AASAN LIFE Company & Enquiry Configuration
+ * Central AASAN BIMA EDUCATION Company & Enquiry Configuration
  * ---------------------------------------------------------------------------
  * Update company contact placeholders and integration endpoints here.
  * All UI sections (Navbar, Enquiry Form, Footer) read directly from this file.
@@ -45,16 +45,16 @@ export interface CompanyConfig {
 }
 
 export const COMPANY_CONFIG: CompanyConfig = {
-  companyName: 'AASAN LIFE',
+  companyName: 'AASAN BIMA EDUCATION',
   tagline: 'Insurance for a Secure Tomorrow.',
   shortDescription:
     'An online insurance training platform offering a paid internship programme to help aspiring professionals learn insurance fundamentals, products, and industry operations.',
   contact: {
-    phoneDisplay: '[ADD COMPANY PHONE NUMBER]',
-    whatsappDisplay: '[ADD WHATSAPP NUMBER]',
-    whatsappDigits: '',
-    emailDisplay: '[ADD COMPANY EMAIL]',
-    addressDisplay: '[ADD COMPANY ADDRESS]',
+    phoneDisplay: '+91 96643 15106',
+    whatsappDisplay: '+91 96643 15106',
+    whatsappDigits: '+919664315106',
+    emailDisplay: 'info@aasanbimaedu.com',
+    addressDisplay: '509, Krish Square, Bhiwadi, Rahastan, 301019, India',
   },
   integrations: {
     enquiryApiEndpoint: '',
@@ -62,7 +62,7 @@ export const COMPANY_CONFIG: CompanyConfig = {
   },
   social: {
     linkedinUrl: '',
-    instagramUrl: '',
+    instagramUrl: 'https://www.instagram.com/aasanbimaedu?lqvp=d3l4bzByNG9rbDRp',
     facebookUrl: '',
   },
 };
@@ -109,7 +109,7 @@ export const PARTICIPANT_STORIES: ParticipantStory[] = [
     qualification: 'B.Com Graduate',
     city: 'Pune',
     feedback:
-      'Before joining AASAN LIFE, policy terms and corporate coverage felt confusing. The online modules broke down life, general, and corporate insurance step by step so everything finally made sense.',
+      'Before joining AASAN BIMA EDUCATION, policy terms and corporate coverage felt confusing. The online modules broke down life, general, and corporate insurance step by step so everything finally made sense.',
     focusArea: 'Fundamentals & Corporate Insurance',
   },
   {
@@ -174,7 +174,7 @@ export interface KeyMetric {
 
 /**
  * Editable Key Metrics figures for the animated counter section.
- * Update targetValue and suffix with verified AASAN LIFE figures.
+ * Update targetValue and suffix with verified AASAN BIMA EDUCATION figures.
  */
 export const KEY_METRICS: KeyMetric[] = [
   {

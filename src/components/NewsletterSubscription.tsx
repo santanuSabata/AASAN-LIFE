@@ -44,7 +44,7 @@ export const NewsletterSubscription: React.FC = () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             email: trimmed,
-            source: 'AASAN LIFE Footer Newsletter',
+            source: 'AASAN BIMA EDUCATION Footer Newsletter',
             subscribedAt: new Date().toISOString(),
           }),
         });
@@ -74,7 +74,7 @@ export const NewsletterSubscription: React.FC = () => {
       <div className="bg-white/6 border border-white/12 rounded-2xl p-6 sm:p-7 mb-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
           <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#FF851B] mb-1.5">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#E4B052] mb-1.5">
               <Mail className="w-4 h-4" aria-hidden="true" />
               <span>Industry Updates</span>
             </div>
@@ -106,14 +106,14 @@ export const NewsletterSubscription: React.FC = () => {
                   placeholder="Enter your email address"
                   aria-invalid={Boolean(error)}
                   aria-describedby={error ? 'newsletter-email-error' : undefined}
-                  className={`flex-1 px-4 py-3 text-sm sm:text-base text-[#17233D] bg-white border rounded-lg placeholder:text-[#17233D]/50 focus:outline-none focus:ring-2 focus:ring-[#FF851B]/50 ${
+                  className={`flex-1 px-4 py-3 text-sm sm:text-base text-[#17233D] bg-white border rounded-lg placeholder:text-[#17233D]/50 focus:outline-none focus:ring-2 focus:ring-[#E4B052]/50 ${
                     error ? 'border-red-500' : 'border-transparent'
                   }`}
                 />
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm sm:text-base font-bold text-[#0A2055] bg-[#FF851B] hover:bg-white disabled:opacity-60 rounded-lg transition-colors whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF851B]"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm sm:text-base font-bold text-[#0A2055] bg-[#E4B052] hover:bg-white disabled:opacity-60 rounded-lg transition-colors whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E4B052]"
                 >
                   {isSubmitting ? (
                     <>
@@ -163,7 +163,7 @@ export const NewsletterSubscription: React.FC = () => {
             </p>
             <p className="text-xs text-[#17233D]/80 mt-0.5 leading-relaxed">
               {toast.mode === 'live'
-                ? `${toast.email} has been added to AASAN LIFE industry updates.`
+                ? `${toast.email} has been added to AASAN BIMA EDUCATION industry updates.`
                 : `${toast.email} validated cleanly. Connect newsletterApiEndpoint in src/config/company.ts for live email list storage.`}
             </p>
           </div>

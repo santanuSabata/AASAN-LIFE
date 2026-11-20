@@ -154,7 +154,7 @@ export const EligibilitySection: React.FC = () => {
                     <div
                       className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${
                         isActive
-                          ? 'bg-white/12 text-[#FF851B]'
+                          ? 'bg-white/12 text-[#E4B052]'
                           : 'bg-[#F5F8FC] text-[#1455D9]'
                       }`}
                     >
@@ -175,7 +175,7 @@ export const EligibilitySection: React.FC = () => {
                   </div>
                   <ArrowRight
                     className={`w-4 h-4 shrink-0 ${
-                      isActive ? 'text-[#FF851B]' : 'text-[#0A2055]/40'
+                      isActive ? 'text-[#E4B052]' : 'text-[#0A2055]/40'
                     }`}
                     aria-hidden="true"
                   />
@@ -190,7 +190,7 @@ export const EligibilitySection: React.FC = () => {
               <div className="space-y-6">
                 <div className="flex items-center gap-4 pb-5 border-b border-[#0A2055]/10">
                   <div className="w-12 h-12 rounded-xl bg-[#0A2055] flex items-center justify-center shrink-0">
-                    <SelectedIcon className="w-6 h-6 text-[#FF851B]" aria-hidden="true" />
+                    <SelectedIcon className="w-6 h-6 text-[#E4B052]" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-[#1455D9]">
@@ -214,7 +214,7 @@ export const EligibilitySection: React.FC = () => {
 
                   <div className="p-4 rounded-xl bg-[#F5F8FC] border border-[#1455D9]/15">
                     <p className="text-xs font-bold uppercase tracking-wider text-[#1455D9] mb-1">
-                      How AASAN LIFE Helps
+                      How AASAN BIMA EDUCATION Helps
                     </p>
                     <p className="text-sm sm:text-base text-[#0A2055] leading-relaxed">
                       {selectedSegment.approach}
@@ -232,7 +232,7 @@ export const EligibilitySection: React.FC = () => {
                           className="flex items-start gap-2.5 text-sm sm:text-base font-medium text-[#17233D]"
                         >
                           <CheckCircle2
-                            className="w-5 h-5 text-[#FF851B] shrink-0 mt-0.5"
+                            className="w-5 h-5 text-[#E4B052] shrink-0 mt-0.5"
                             aria-hidden="true"
                           />
                           <span>{item}</span>

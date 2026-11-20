@@ -21,14 +21,14 @@ const TERMS_SECTIONS = [
   {
     title: '3. Paid Internship Fees & Enrolment Confirmation',
     body: [
-      'The AASAN LIFE internship is a paid internship programme. Applicable fee structures, training schedules, duration, and enrolment procedures are communicated directly by our team prior to registration.',
-      'Any programme benefits or career opportunities are subject to the terms formally confirmed by the AASAN LIFE team at the time of enrolment.',
+      'The AASAN BIMA EDUCATION internship is a paid internship programme. Applicable fee structures, training schedules, duration, and enrolment procedures are communicated directly by our team prior to registration.',
+      'Any programme benefits or career opportunities are subject to the terms formally confirmed by the AASAN BIMA EDUCATION team at the time of enrolment.',
     ],
   },
   {
     title: '4. Online Learning & Advisor Guidance',
     body: [
-      'The AASAN LIFE Advisor chat and website materials are provided for informational and educational guidance. While we strive for accuracy across all training descriptions, learners must rely on direct communication from our official team for final enrolment terms.',
+      'The AASAN BIMA EDUCATION Advisor chat and website materials are provided for informational and educational guidance. While we strive for accuracy across all training descriptions, learners must rely on direct communication from our official team for final enrolment terms.',
     ],
   },
   {
@@ -49,9 +49,9 @@ export const TermsPage: React.FC = () => {
   return (
     <>
       <PageMeta
-        title="Terms & Conditions | AASAN LIFE"
-        description="Review the AASAN LIFE Terms and Conditions governing website access, online insurance training information, and internship enquiries."
-        keywords="AASAN LIFE Terms and Conditions, Paid Internship Terms, Online Training Terms"
+        title="Terms & Conditions | AASAN BIMA EDUCATION"
+        description="Review the AASAN BIMA EDUCATION Terms and Conditions governing website access, online insurance training information, and internship enquiries."
+        keywords="AASAN BIMA EDUCATION Terms and Conditions, Paid Internship Terms, Online Training Terms"
       />
       <PageHeader
         eyebrow="Legal Terms"

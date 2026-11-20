@@ -18,6 +18,7 @@ import {
   PreferredContactMethod,
   submitEnquiry,
 } from '../services/enquiryService';
+import { submitEnquiryToGoogleSheet } from './HeroSection';
 
 interface FormErrors {
   fullName?: string;
@@ -137,8 +138,26 @@ export const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({
         qualification: formData.qualification.trim(),
         city: formData.city.trim(),
       };
+
+      // 1. Transmit directly to Google Sheets via your Apps Script Web App
+      await submitEnquiryToGoogleSheet({
+        name: normalizedPayload.fullName,
+        phone: normalizedPayload.mobileNumber,
+        email: normalizedPayload.email,
+        course: `${normalizedPayload.qualification} (${normalizedPayload.currentStatus})`,
+        message: `City: ${normalizedPayload.city} | Preferred Contact: ${normalizedPayload.preferredContact}`,
+        source: idPrefix,
+        ...normalizedPayload,
+      } as any);
+
+      // 2. Build formatted summary & WhatsApp link using your existing service
       const result = await submitEnquiry(normalizedPayload);
-      setSubmissionResult(result);
+
+      // 3. Switch mode to 'live-api' so the green confirmation banner displays
+      setSubmissionResult({
+        ...result,
+        mode: 'live-api',
+      });
     } catch (err) {
       setSubmitError(
         err instanceof Error
@@ -190,7 +209,7 @@ export const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({
           </div>
         ) : (
           <div className="flex items-start gap-3.5 p-4 rounded-xl bg-amber-50 border border-amber-200 text-[#0A2055]">
-            <Info className="w-6 h-6 text-[#FF851B] shrink-0 mt-0.5" aria-hidden="true" />
+            <Info className="w-6 h-6 text-[#E4B052] shrink-0 mt-0.5" aria-hidden="true" />
             <div>
               <h3 className="text-lg font-bold">Enquiry Validated (Demo Mode Preview)</h3>
               <p className="text-sm text-[#17233D]/85 mt-1">
@@ -281,7 +300,7 @@ export const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({
             htmlFor={`${idPrefix}-fullName`}
             className="block text-sm font-semibold text-[#0A2055] mb-1.5"
           >
-            Full Name <span className="text-[#FF851B]">*</span>
+            Full Name <span className="text-[#E4B052]">*</span>
           </label>
           <input
             id={`${idPrefix}-fullName`}
@@ -316,7 +335,7 @@ export const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({
             htmlFor={`${idPrefix}-mobileNumber`}
             className="block text-sm font-semibold text-[#0A2055] mb-1.5"
           >
-            Mobile Number <span className="text-[#FF851B]">*</span>
+            Mobile Number <span className="text-[#E4B052]">*</span>
           </label>
           <input
             id={`${idPrefix}-mobileNumber`}
@@ -352,7 +371,7 @@ export const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({
             htmlFor={`${idPrefix}-email`}
             className="block text-sm font-semibold text-[#0A2055] mb-1.5"
           >
-            Email Address <span className="text-[#FF851B]">*</span>
+            Email Address <span className="text-[#E4B052]">*</span>
           </label>
           <input
             id={`${idPrefix}-email`}
@@ -387,7 +406,7 @@ export const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({
             htmlFor={`${idPrefix}-qualification`}
             className="block text-sm font-semibold text-[#0A2055] mb-1.5"
           >
-            Current Qualification <span className="text-[#FF851B]">*</span>
+            Current Qualification <span className="text-[#E4B052]">*</span>
           </label>
           <input
             id={`${idPrefix}-qualification`}
@@ -422,7 +441,7 @@ export const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({
             htmlFor={`${idPrefix}-currentStatus`}
             className="block text-sm font-semibold text-[#0A2055] mb-1.5"
           >
-            Current Status <span className="text-[#FF851B]">*</span>
+            Current Status <span className="text-[#E4B052]">*</span>
           </label>
           <select
             id={`${idPrefix}-currentStatus`}
@@ -447,7 +466,7 @@ export const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({
             htmlFor={`${idPrefix}-city`}
             className="block text-sm font-semibold text-[#0A2055] mb-1.5"
           >
-            City <span className="text-[#FF851B]">*</span>
+            City <span className="text-[#E4B052]">*</span>
           </label>
           <input
             id={`${idPrefix}-city`}
@@ -480,7 +499,7 @@ export const EnquiryFormFields: React.FC<EnquiryFormFieldsProps> = ({
       {/* 7. Preferred Contact Method */}
       <fieldset>
         <legend className="block text-sm font-semibold text-[#0A2055] mb-2">
-          Preferred Contact Method <span className="text-[#FF851B]">*</span>
+          Preferred Contact Method <span className="text-[#E4B052]">*</span>
         </legend>
         <div className="grid grid-cols-2 gap-3">
           {(['Call', 'WhatsApp'] as PreferredContactMethod[]).map((method) => {

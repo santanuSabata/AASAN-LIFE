@@ -8,7 +8,7 @@ interface FAQItem {
 
 const FAQS: FAQItem[] = [
   {
-    question: 'What is the AASAN LIFE Online Internship Programme?',
+    question: 'What is the AASAN BIMA EDUCATION Online Internship Programme?',
     answer:
       'It is an online paid internship programme designed to introduce individuals to the insurance industry through structured learning and industry-focused training.',
   },

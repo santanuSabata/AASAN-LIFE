@@ -172,7 +172,7 @@ export const LearningSection: React.FC = () => {
                             className="flex items-start gap-2 text-xs sm:text-sm text-[#17233D]/85"
                           >
                             <Check
-                              className="w-4 h-4 text-[#FF851B] shrink-0 mt-0.5"
+                              className="w-4 h-4 text-[#E4B052] shrink-0 mt-0.5"
                               aria-hidden="true"
                             />
                             <span>{topic}</span>

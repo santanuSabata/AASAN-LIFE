@@ -46,7 +46,7 @@ export const ScrollProgressBar: React.FC = () => {
       className="fixed top-0 left-0 right-0 z-[60] h-[3px] bg-[#0A2055]/8 pointer-events-none"
     >
       <div
-        className="h-full w-full origin-left bg-gradient-to-r from-[#1455D9] to-[#FF851B] will-change-transform"
+        className="h-full w-full origin-left bg-gradient-to-r from-[#1455D9] to-[#E4B052] will-change-transform"
         style={{ transform: `scaleX(${progress})` }}
       />
     </div>

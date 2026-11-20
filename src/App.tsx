@@ -6,6 +6,10 @@ import { FloatingActions } from './components/FloatingActions';
 import { InternshipModal } from './components/InternshipModal';
 import { ScrollProgressBar } from './components/ScrollProgressBar';
 import { AasanChatWidget } from './components/AasanChatWidget';
+import {
+  MotionProvider,
+  PageTransitionWrapper,
+} from './components/motion/MotionPrimitives';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { InternshipPage } from './pages/InternshipPage';
@@ -29,7 +33,7 @@ export default function App() {
       case '/what-you-learn':
         return <WhatYouLearnPage />;
       case '/benefits':
-        return <BenefitsPage />;
+        return <BenefitsPage onOpenModal={() => setIsInternshipModalOpen(true)} />;
       case '/contact-us':
         return <ContactPage />;
       case '/privacy-policy':
@@ -43,20 +47,26 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#17233D]">
-      <ScrollProgressBar />
-      <Navbar onOpenModal={() => setIsInternshipModalOpen(true)} />
-      <main className="flex-1">{renderPage()}</main>
-      <Footer />
-      <FloatingActions
-        isChatOpen={isChatOpen}
-        onToggleChat={() => setIsChatOpen((prev) => !prev)}
-      />
-      <AasanChatWidget isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
-      <InternshipModal
-        isOpen={isInternshipModalOpen}
-        onClose={() => setIsInternshipModalOpen(false)}
-      />
-    </div>
+    <MotionProvider>
+      <div className="min-h-screen flex flex-col bg-white text-[#17233D]">
+        <ScrollProgressBar />
+        <Navbar onOpenModal={() => setIsInternshipModalOpen(true)} />
+        <main className="flex-1">
+          <PageTransitionWrapper routeKey={currentPath}>
+            {renderPage()}
+          </PageTransitionWrapper>
+        </main>
+        <Footer />
+        <FloatingActions
+          isChatOpen={isChatOpen}
+          onToggleChat={() => setIsChatOpen((prev) => !prev)}
+        />
+        <AasanChatWidget isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
+        <InternshipModal
+          isOpen={isInternshipModalOpen}
+          onClose={() => setIsInternshipModalOpen(false)}
+        />
+      </div>
+    </MotionProvider>
   );
 }

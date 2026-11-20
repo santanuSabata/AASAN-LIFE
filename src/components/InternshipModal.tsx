@@ -44,8 +44,8 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
         {/* Modal Header */}
         <div className="flex items-start justify-between gap-4 px-6 py-5 bg-[#0A2055] text-white shrink-0">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#FF851B] mb-1">
-              AASAN LIFE · Online Paid Internship Programme
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#E4B052] mb-1">
+              AASAN BIMA EDUCATION · Online Paid Internship Programme
             </p>
             <h2
               id="internship-modal-title"
@@ -62,7 +62,7 @@ export const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClos
             type="button"
             onClick={onClose}
             aria-label="Close internship enquiry modal"
-            className="w-10 h-10 inline-flex items-center justify-center rounded-lg text-white/85 hover:text-white hover:bg-white/12 transition-colors shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF851B]"
+            className="w-10 h-10 inline-flex items-center justify-center rounded-lg text-white/85 hover:text-white hover:bg-white/12 transition-colors shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E4B052]"
           >
             <X className="w-5 h-5" aria-hidden="true" />
           </button>

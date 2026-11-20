@@ -49,7 +49,7 @@ export const ProcessSection: React.FC = () => {
           {/* Connecting line across desktop steps */}
           <div
             aria-hidden="true"
-            className="hidden md:block absolute top-8 left-[16.66%] right-[16.66%] h-0.5 bg-gradient-to-r from-[#1455D9]/25 via-[#FF851B]/50 to-[#1455D9]/25"
+            className="hidden md:block absolute top-8 left-[16.66%] right-[16.66%] h-0.5 bg-gradient-to-r from-[#1455D9]/25 via-[#E4B052]/50 to-[#1455D9]/25"
           />
 
           {STEPS.map((step) => {
@@ -63,7 +63,7 @@ export const ProcessSection: React.FC = () => {
                   <span className="font-[family-name:var(--font-display)] text-lg font-extrabold tabular-nums text-white">
                     {step.stepNumber}
                   </span>
-                  <span className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-[#FF851B] flex items-center justify-center shadow-xs">
+                  <span className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-[#E4B052] flex items-center justify-center shadow-xs">
                     <Icon className="w-3.5 h-3.5 text-[#0A2055]" aria-hidden="true" />
                   </span>
                 </div>

@@ -39,17 +39,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
             {phoneIsConfigured ? (
               <a
                 href={`tel:${COMPANY_CONFIG.contact.phoneDisplay.replace(/\s+/g, '')}`}
-                className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#FF851B] transition-colors whitespace-nowrap shrink-0"
+                className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#E4B052] transition-colors whitespace-nowrap shrink-0"
               >
-                <Phone className="w-3.5 h-3.5 text-[#FF851B]" aria-hidden="true" />
+                <Phone className="w-3.5 h-3.5 text-[#E4B052]" aria-hidden="true" />
                 <span>Enquiry Desk: {COMPANY_CONFIG.contact.phoneDisplay}</span>
               </a>
             ) : (
               <AppLink
                 to="/contact-us"
-                className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#FF851B] transition-colors whitespace-nowrap shrink-0"
+                className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#E4B052] transition-colors whitespace-nowrap shrink-0"
               >
-                <Phone className="w-3.5 h-3.5 text-[#FF851B]" aria-hidden="true" />
+                <Phone className="w-3.5 h-3.5 text-[#E4B052]" aria-hidden="true" />
                 <span>Enquiry Desk: {COMPANY_CONFIG.contact.phoneDisplay}</span>
               </AppLink>
             )}
@@ -57,13 +57,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
               |
             </span>
             <span className="hidden md:inline-flex items-center gap-1.5 text-white/85 whitespace-nowrap">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#FF851B]" aria-hidden="true" />
+              <ShieldCheck className="w-3.5 h-3.5 text-[#E4B052]" aria-hidden="true" />
               <span>{COMPANY_CONFIG.tagline}</span>
             </span>
           </div>
 
           <div className="flex items-center gap-3 shrink-0">
-            <span className="text-[#FF851B] font-semibold whitespace-nowrap">
+            <span className="text-[#E4B052] font-semibold whitespace-nowrap">
               Online Paid Internship Programme
             </span>
             <span className="text-white/30" aria-hidden="true">
@@ -71,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
             </span>
             <AppLink
               to="/contact-us"
-              className="inline-flex items-center gap-1 font-semibold text-white hover:text-[#FF851B] transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-1 font-semibold text-white hover:text-[#E4B052] transition-colors whitespace-nowrap"
             >
               <span>Enquire Now</span>
               <ArrowRight className="w-3 h-3" aria-hidden="true" />
@@ -90,10 +90,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 lg:gap-8 h-16 lg:h-[72px]">
-            {/* Left: AASAN LIFE Official Logo */}
+            {/* Left: AASAN BIMA EDUCATION Official Logo */}
             <AppLink
               to="/"
-              aria-label="AASAN LIFE Home"
+              aria-label="AASAN BIMA EDUCATION Home"
               onClick={handleLinkClick}
               className="inline-flex items-center shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1455D9] rounded-md"
             >
@@ -114,8 +114,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
                     aria-current={isActive ? 'page' : undefined}
                     className={`relative py-1 whitespace-nowrap shrink-0 transition-colors duration-150 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:transition-all after:duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1455D9] rounded-xs ${
                       isActive
-                        ? 'text-[#1455D9] font-semibold after:w-full after:bg-[#FF851B]'
-                        : 'text-[#17233D]/85 hover:text-[#1455D9] after:w-0 after:bg-[#FF851B] hover:after:w-full'
+                        ? 'text-[#1455D9] font-semibold after:w-full after:bg-[#E4B052]'
+                        : 'text-[#17233D]/85 hover:text-[#1455D9] after:w-0 after:bg-[#E4B052] hover:after:w-full'
                     }`}
                   >
                     {item.label}

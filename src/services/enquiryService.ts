@@ -22,7 +22,7 @@ export interface EnquirySubmissionResult {
 
 export function formatEnquiryMessage(payload: EnquiryPayload): string {
   return [
-    'Hello AASAN LIFE Team,',
+    'Hello AASAN BIMA EDUCATION Team,',
     'I would like to enquire about the Online Paid Internship Programme.',
     '',
     `Full Name: ${payload.fullName}`,
@@ -58,7 +58,7 @@ export async function submitEnquiry(payload: EnquiryPayload): Promise<EnquirySub
       },
       body: JSON.stringify({
         ...payload,
-        source: 'AASAN LIFE Landing Page',
+        source: 'AASAN BIMA EDUCATION Landing Page',
         submittedAt,
       }),
     });

@@ -9,7 +9,7 @@ const POLICY_SECTIONS = [
     title: '1. Information We Collect',
     body: [
       `When you submit an internship enquiry or newsletter subscription on the ${COMPANY_CONFIG.companyName} website, we collect the details you voluntarily provide. For internship enquiries, this includes your Full Name, Mobile Number, Email Address, Current Qualification, Current Status, City, and Preferred Contact Method.`,
-      'For industry updates subscriptions, we collect your Email Address. If you interact with the AASAN LIFE Advisor chat, messages sent during your session are processed to generate responses to your questions.',
+      'For industry updates subscriptions, we collect your Email Address. If you interact with the AASAN BIMA EDUCATION Advisor chat, messages sent during your session are processed to generate responses to your questions.',
     ],
   },
   {
@@ -45,9 +45,9 @@ export const PrivacyPolicyPage: React.FC = () => {
   return (
     <>
       <PageMeta
-        title="Privacy Policy | AASAN LIFE Training"
-        description="Read the AASAN LIFE Privacy Policy explaining how internship enquiry details, newsletter emails, and advisor chat sessions are handled."
-        keywords="AASAN LIFE Privacy Policy, Data Protection, Internship Enquiry Privacy"
+        title="Privacy Policy | AASAN BIMA EDUCATION Training"
+        description="Read the AASAN BIMA EDUCATION Privacy Policy explaining how internship enquiry details, newsletter emails, and advisor chat sessions are handled."
+        keywords="AASAN BIMA EDUCATION Privacy Policy, Data Protection, Internship Enquiry Privacy"
       />
       <PageHeader
         eyebrow="Legal & Privacy"

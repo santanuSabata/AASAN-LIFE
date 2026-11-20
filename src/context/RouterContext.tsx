@@ -20,42 +20,42 @@ export const ROUTES: Record<AppRoutePath, RouteMeta> = {
   '/': {
     path: '/',
     label: 'Home',
-    title: 'AASAN LIFE | Online Insurance Training & Paid Internship Programme',
+    title: 'AASAN BIMA EDUCATION | Online Insurance Training & Paid Internship Programme',
   },
   '/about-us': {
     path: '/about-us',
     label: 'About Us',
-    title: 'About Us | AASAN LIFE',
+    title: 'About Us | AASAN BIMA EDUCATION',
   },
   '/internship-program': {
     path: '/internship-program',
     label: 'Internship Program',
-    title: 'Internship Program | AASAN LIFE',
+    title: 'Internship Program | AASAN BIMA EDUCATION',
   },
   '/what-you-learn': {
     path: '/what-you-learn',
     label: 'What You Learn',
-    title: 'What You Learn | AASAN LIFE',
+    title: 'What You Learn | AASAN BIMA EDUCATION',
   },
   '/benefits': {
     path: '/benefits',
     label: 'Benefits',
-    title: 'Benefits | AASAN LIFE',
+    title: 'Benefits | AASAN BIMA EDUCATION',
   },
   '/contact-us': {
     path: '/contact-us',
     label: 'Contact Us',
-    title: 'Contact Us | AASAN LIFE',
+    title: 'Contact Us | AASAN BIMA EDUCATION',
   },
   '/privacy-policy': {
     path: '/privacy-policy',
     label: 'Privacy Policy',
-    title: 'Privacy Policy | AASAN LIFE',
+    title: 'Privacy Policy | AASAN BIMA EDUCATION',
   },
   '/terms-and-conditions': {
     path: '/terms-and-conditions',
     label: 'Terms & Conditions',
-    title: 'Terms & Conditions | AASAN LIFE',
+    title: 'Terms & Conditions | AASAN BIMA EDUCATION',
   },
 };
 

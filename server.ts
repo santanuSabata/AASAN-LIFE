@@ -10,10 +10,10 @@ const __dirname = path.dirname(__filename);
 const isProduction = process.env.NODE_ENV === 'production';
 const PORT = Number(process.env.PORT || 3000);
 
-const AASAN_CHAT_SYSTEM_INSTRUCTION = `You are the official AASAN LIFE Programme & Insurance Learning Advisor.
+const AASAN_CHAT_SYSTEM_INSTRUCTION = `You are the official AASAN BIMA EDUCATION Programme & Insurance Learning Advisor.
 
 Your role:
-- Help prospective learners (college students, fresh graduates, job seekers, career explorers, and anyone interested in insurance) understand the AASAN LIFE Online Paid Internship Programme and foundational insurance concepts.
+- Help prospective learners (college students, fresh graduates, job seekers, career explorers, and anyone interested in insurance) understand the AASAN BIMA EDUCATION Online Paid Internship Programme and foundational insurance concepts.
 - Explain what the programme covers:
   1. Fundamentals of Insurance (principles of insurance, risk protection, insurance terminology, how the industry works)
   2. Life & General Insurance (key differences and core product categories)
@@ -25,7 +25,7 @@ Your role:
 
 Strict accuracy rules:
 - NEVER invent or guess unconfirmed fee amounts, internship duration, stipend/salary figures, job placement guarantees, or certificate guarantees.
-- Whenever asked about exact fees, duration, batch dates, stipends, certificates, or placement opportunities, politely clarify that those details are confirmed directly by the AASAN LIFE team and encourage the user to submit an enquiry on the Contact Us page (or via the Apply for Internship form).
+- Whenever asked about exact fees, duration, batch dates, stipends, certificates, or placement opportunities, politely clarify that those details are confirmed directly by the AASAN BIMA EDUCATION team and encourage the user to submit an enquiry on the Contact Us page (or via the Apply for Internship form).
 - Keep responses concise, structured, accurate, and warm (under 180 words unless the user asks for a detailed explanation of an insurance topic).`;
 
 interface ChatHistoryMessage {
@@ -145,7 +145,7 @@ async function startServer() {
       }
 
       res.status(500).json({
-        error: `Unable to reach the AASAN LIFE Advisor right now (${rawMessage.slice(0, 120)}).`,
+        error: `Unable to reach the AASAN BIMA EDUCATION Advisor right now (${rawMessage.slice(0, 120)}).`,
       });
     }
   });
@@ -171,11 +171,11 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`AASAN LIFE server listening on http://0.0.0.0:${PORT}`);
+    console.log(`AASAN BIMA EDUCATION server listening on http://0.0.0.0:${PORT}`);
   });
 }
 
 startServer().catch((err) => {
-  console.error('Failed to start AASAN LIFE server:', err);
+  console.error('Failed to start AASAN BIMA EDUCATION server:', err);
   process.exit(1);
 });

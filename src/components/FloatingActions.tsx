@@ -4,7 +4,7 @@ import { COMPANY_CONFIG } from '../config/company';
 import { AppLink } from '../context/RouterContext';
 
 const DEFAULT_WHATSAPP_MESSAGE =
-  'Hello AASAN LIFE Team, I would like to know more about the Online Paid Internship Programme.';
+  'Hello AASAN BIMA EDUCATION Team, I would like to know more about the Online Paid Internship Programme.';
 
 interface FloatingActionsProps {
   isChatOpen: boolean;
@@ -66,8 +66,8 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
-          title="Chat with AASAN LIFE on WhatsApp"
-          className="w-12 h-12 rounded-full bg-[#1455D9] hover:bg-[#0A2055] text-white border-2 border-[#FF851B] shadow-[0_8px_22px_rgba(20,85,217,0.3)] inline-flex items-center justify-center transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
+          title="Chat with AASAN BIMA EDUCATION on WhatsApp"
+          className="w-12 h-12 rounded-full bg-[#1455D9] hover:bg-[#0A2055] text-white border-2 border-[#E4B052] shadow-[0_8px_22px_rgba(20,85,217,0.3)] inline-flex items-center justify-center transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
         >
           <WhatsAppIcon />
         </a>
@@ -76,7 +76,7 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({
           to="/contact-us"
           aria-label="Enquire via Contact page"
           title="Enquire via Contact Us (set whatsappDigits in src/config/company.ts)"
-          className="w-12 h-12 rounded-full bg-[#1455D9] hover:bg-[#0A2055] text-white border-2 border-[#FF851B] shadow-[0_8px_22px_rgba(20,85,217,0.3)] inline-flex items-center justify-center transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
+          className="w-12 h-12 rounded-full bg-[#1455D9] hover:bg-[#0A2055] text-white border-2 border-[#E4B052] shadow-[0_8px_22px_rgba(20,85,217,0.3)] inline-flex items-center justify-center transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
         >
           <WhatsAppIcon />
         </AppLink>
@@ -87,18 +87,18 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({
         type="button"
         onClick={onToggleChat}
         aria-expanded={isChatOpen}
-        aria-label={isChatOpen ? 'Close AASAN LIFE Advisor' : 'Open AASAN LIFE Advisor'}
-        title={isChatOpen ? 'Close AASAN LIFE Advisor' : 'Ask AASAN LIFE Advisor (Gemini)'}
-        className="h-12 px-4 rounded-full bg-[#0A2055] hover:bg-[#1455D9] text-white border-2 border-[#FF851B] shadow-[0_10px_26px_rgba(10,32,85,0.28)] inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-150 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
+        aria-label={isChatOpen ? 'Close AASAN BIMA EDUCATION Advisor' : 'Open AASAN BIMA EDUCATION Advisor'}
+        title={isChatOpen ? 'Close AASAN BIMA EDUCATION Advisor' : 'Ask AASAN BIMA EDUCATION Advisor (Gemini)'}
+        className="h-12 px-4 rounded-full bg-[#0A2055] hover:bg-[#1455D9] text-white border-2 border-[#E4B052] shadow-[0_10px_26px_rgba(10,32,85,0.28)] inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-150 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1455D9]"
       >
         {isChatOpen ? (
           <>
-            <X className="w-4 h-4 text-[#FF851B]" aria-hidden="true" />
+            <X className="w-4 h-4 text-[#E4B052]" aria-hidden="true" />
             <span>Close Chat</span>
           </>
         ) : (
           <>
-            <Bot className="w-4 h-4 text-[#FF851B]" aria-hidden="true" />
+            <Bot className="w-4 h-4 text-[#E4B052]" aria-hidden="true" />
             <span>Ask Advisor</span>
           </>
         )}

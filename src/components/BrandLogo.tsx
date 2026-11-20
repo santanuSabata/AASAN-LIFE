@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const OFFICIAL_LOGO_PATH = '/assets/aistudio/image_e265f7e3.png';
+const OFFICIAL_LOGO_PATH = '/assets/aistudio/logo.png';
 
 interface BrandLogoProps {
   variant?: 'dark' | 'light';
@@ -8,7 +8,7 @@ interface BrandLogoProps {
 }
 
 /**
- * Official AASAN LIFE brand logo component.
+ * Official AASAN BIMA EDUCATION brand logo component.
  * Displays the exact attached company logo without modification or distortion.
  */
 export const BrandLogo: React.FC<BrandLogoProps> = ({
@@ -24,8 +24,8 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
   const imgHeightClasses =
     variant === 'light'
-      ? 'h-11 sm:h-12 w-auto object-contain'
-      : 'h-11 lg:h-12 w-auto object-contain';
+      ? 'h-11 sm:h-18 w-auto object-contain'
+      : 'h-11 lg:h-18 w-auto object-contain';
 
   if (imgError) {
     return (
@@ -34,7 +34,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
           variant === 'light' ? 'text-white' : 'text-[#0A2055]'
         } ${className}`}
       >
-        AASAN <span className={variant === 'light' ? 'text-[#FF851B] ml-1.5' : 'text-[#1455D9] ml-1.5'}>LIFE</span>
+        AASAN <span className={variant === 'light' ? 'text-[#E4B052] ml-1.5' : 'text-[#1455D9] ml-1.5'}>LIFE</span>
       </span>
     );
   }
@@ -43,7 +43,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     <span className={`${wrapperClasses} ${className}`}>
       <img
         src={OFFICIAL_LOGO_PATH}
-        alt="AASAN LIFE — Insurance for a Secure Tomorrow"
+        alt="AASAN BIMA EDUCATION — Insurance for a Secure Tomorrow"
         width={1774}
         height={887}
         referrerPolicy="no-referrer"

@@ -104,7 +104,7 @@ export const KeyMetricsSection: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <p className="text-sm font-semibold text-[#FF851B] mb-2">Programme Milestones</p>
+          <p className="text-sm font-semibold text-[#E4B052] mb-2">Programme Milestones</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">
             Key Metrics
           </h2>
@@ -123,7 +123,7 @@ export const KeyMetricsSection: React.FC = () => {
                 className="bg-white/8 border border-white/15 rounded-2xl p-7 sm:p-8 text-center flex flex-col items-center hover:bg-white/12 transition-colors"
               >
                 <div className="w-13 h-13 rounded-xl bg-[#1455D9] flex items-center justify-center mb-5 shadow-sm">
-                  <Icon className="w-6 h-6 text-[#FF851B]" aria-hidden="true" />
+                  <Icon className="w-6 h-6 text-[#E4B052]" aria-hidden="true" />
                 </div>
 
                 <p
@@ -137,7 +137,7 @@ export const KeyMetricsSection: React.FC = () => {
                   />
                 </p>
 
-                <h3 className="text-lg font-bold text-[#FF851B] mb-2">{metric.label}</h3>
+                <h3 className="text-lg font-bold text-[#E4B052] mb-2">{metric.label}</h3>
                 <p className="text-sm text-white/75 leading-relaxed max-w-xs">
                   {metric.description}
                 </p>

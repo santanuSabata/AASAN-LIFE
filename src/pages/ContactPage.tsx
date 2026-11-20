@@ -6,6 +6,7 @@ import { PageMeta } from '../components/PageMeta';
 import { EnquiryForm } from '../components/EnquiryForm';
 import { ProcessSection } from '../components/ProcessSection';
 import { FAQSection } from '../components/FAQSection';
+import BannerImg from '../assets/images/internship_banner.jpeg';
 
 export const ContactPage: React.FC = () => {
   const contactCards = [
@@ -34,14 +35,16 @@ export const ContactPage: React.FC = () => {
   return (
     <>
       <PageMeta
-        title="Contact Us & Enquire | AASAN LIFE"
-        description="Contact AASAN LIFE to enquire about our Online Paid Insurance Internship Programme, schedule details, and enrolment guidance from our team."
-        keywords="Contact AASAN LIFE, Insurance Internship Enquiry, Apply Online Internship, AASAN LIFE"
+        title="Contact Us & Enquire | AASAN BIMA EDUCATION"
+        description="Contact AASAN BIMA EDUCATION to enquire about our Online Paid Insurance Internship Programme, schedule details, and enrolment guidance from our team."
+        keywords="Contact AASAN BIMA EDUCATION, Insurance Internship Enquiry, Apply Online Internship, AASAN BIMA EDUCATION"
       />
       <PageHeader
         eyebrow="Contact Us"
         title="Ready to Start Your Insurance Career Journey?"
-        description="Reach out to the AASAN LIFE team for internship duration, fee structure, and enrolment guidance."
+        description="Reach out to the AASAN BIMA EDUCATION team for internship duration, fee structure, and enrolment guidance."
+        imageUrl={BannerImg}
+        imageAlt="Why Start Your Insurance Learning Journey With Us?"
       />
 
       {/* Direct Contact Cards */}
@@ -56,7 +59,7 @@ export const ContactPage: React.FC = () => {
                   className="bg-[#F5F8FC]/70 border border-[#0A2055]/10 rounded-xl p-6"
                 >
                   <div className="w-10 h-10 rounded-lg bg-[#0A2055] flex items-center justify-center mb-4">
-                    <Icon className="w-5 h-5 text-[#FF851B]" aria-hidden="true" />
+                    <Icon className="w-5 h-5 text-[#E4B052]" aria-hidden="true" />
                   </div>
                   <h2 className="text-sm font-bold uppercase tracking-wider text-[#1455D9] mb-1.5">
                     {item.label}

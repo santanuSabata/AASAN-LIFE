@@ -62,7 +62,7 @@ export const InternshipSection: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Left Column */}
             <div className="lg:col-span-6">
-              <p className="text-sm font-semibold text-[#FF851B] mb-2.5">
+              <p className="text-sm font-semibold text-[#E4B052] mb-2.5">
                 Internship Programme
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
@@ -82,7 +82,7 @@ export const InternshipSection: React.FC = () => {
                       className="flex items-center gap-3.5 p-4 rounded-xl bg-white/8 border border-white/12"
                     >
                       <div className="w-10 h-10 rounded-lg bg-[#1455D9] flex items-center justify-center shrink-0">
-                        <Icon className="w-5 h-5 text-[#FF851B]" aria-hidden="true" />
+                        <Icon className="w-5 h-5 text-[#E4B052]" aria-hidden="true" />
                       </div>
                       <span className="text-sm sm:text-base font-semibold text-white">
                         {item.label}
@@ -102,11 +102,11 @@ export const InternshipSection: React.FC = () => {
                       Programme Overview
                     </h3>
                     <p className="text-sm text-[#17233D]/70 mt-0.5">
-                      AASAN LIFE · Insurance Industry Training
+                      AASAN BIMA EDUCATION · Insurance Industry Training
                     </p>
                   </div>
                   <div className="w-11 h-11 rounded-xl bg-[#F5F8FC] border border-[#0A2055]/10 flex items-center justify-center shrink-0">
-                    <Check className="w-5 h-5 text-[#FF851B]" aria-hidden="true" />
+                    <Check className="w-5 h-5 text-[#E4B052]" aria-hidden="true" />
                   </div>
                 </div>
 

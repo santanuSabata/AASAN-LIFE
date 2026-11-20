@@ -20,7 +20,7 @@ export const EnquiryForm: React.FC = () => {
             </h2>
             <p className="text-base sm:text-lg text-[#17233D]/80 leading-relaxed mb-7">
               Share your details and our team will contact you with complete information about the
-              AASAN LIFE Online Paid Internship Programme.
+              AASAN BIMA EDUCATION Online Paid Internship Programme.
             </p>
 
             <div className="bg-white border border-[#0A2055]/10 rounded-xl p-6 space-y-4">
@@ -60,7 +60,7 @@ export const EnquiryForm: React.FC = () => {
 
               {!isLiveApiConfigured && (
                 <div className="pt-4 border-t border-[#0A2055]/10 flex items-start gap-2.5 text-xs text-[#17233D]/75">
-                  <Info className="w-4 h-4 text-[#FF851B] shrink-0 mt-0.5" aria-hidden="true" />
+                  <Info className="w-4 h-4 text-[#E4B052] shrink-0 mt-0.5" aria-hidden="true" />
                   <span>
                     <strong>Demo Mode Active:</strong> Live CRM/Google Sheets webhook is not
                     connected yet. Submitting validates your details and prepares a WhatsApp-ready
