@@ -59,6 +59,19 @@ const INSTRUCTORS: InstructorProfile[] = [
       'Live Case Studies & Career Mentorship',
     ],
   },
+  {
+    id: 'pallavi',
+    name: 'Ms. Pallavi',
+    role: 'Lead Educator · Client Advisory & Policy Servicing',
+    badge: 'Lead Educator',
+    initials: 'PR',
+    photoPath: '/assets/images/instructor_pallavi.jpeg',
+    bio: 'Trains aspiring learners on client needs analysis, policy documentation, renewal workflows, and professional communication for insurance roles.',
+    highlights: [
+      'Policy Servicing & Documentation Standards',
+      'Client Advisory & Soft-Skills Readiness',
+    ],
+  },
 ];
 
 const SHARED_MENTORSHIP_PILLARS = [
@@ -138,7 +151,7 @@ function buildGoogleCalendarUrl(params: {
     'Free Demo Session: Online Insurance Training & Paid Internship | AASAN BIMA EDUCATION'
   );
   const details = encodeURIComponent(
-    `Live Interactive Demo Session with Lead Educators Mr. Parveen & Mr. Shantanu.\n\n` +
+    `Live Interactive Demo Session with Lead Educators Mr. Parveen, Mr. Shantanu & Ms. Pallavi Rajput.\n\n` +
       (params.attendeeName ? `Participant: ${params.attendeeName}\n` : '') +
       `Topics Covered:\n` +
       `• Insurance Industry Career Roadmap\n` +
@@ -172,24 +185,26 @@ const InstructorCard: React.FC<{
 }> = ({ instructor, index, isVisible }) => {
   const [imgError, setImgError] = useState(false);
 
+  const initialX = index === 0 ? -16 : index === 2 ? 16 : 0;
+
   return (
     <div
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible
           ? 'translate3d(0, 0, 0) scale(1)'
-          : `translate3d(${index === 0 ? '-18px' : '18px'}, 24px, 0) scale(0.98)`,
+          : `translate3d(${initialX}px, 24px, 0) scale(0.98)`,
         transitionProperty: 'opacity, transform',
         transitionDuration: '650ms',
         transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)',
-        transitionDelay: `${index * 130}ms`,
+        transitionDelay: `${index * 110}ms`,
         willChange: 'transform, opacity',
       }}
       className="h-full"
     >
       <SpotlightCard
         spotlightColor="rgba(20, 85, 217, 0.09)"
-        className="group h-full bg-gradient-to-br from-[#F5F8FC] via-white to-[#F5F8FC]/60 rounded-3xl border border-[#0A2055]/12 p-6 sm:p-8 shadow-[0_16px_44px_rgba(10,32,85,0.08)] hover:border-[#1455D9]/35 hover:shadow-[0_24px_54px_rgba(10,32,85,0.13)] transition-shadow duration-300"
+        className="group h-full bg-gradient-to-br from-[#F5F8FC] via-white to-[#F5F8FC]/60 rounded-3xl border border-[#0A2055]/12 p-6 sm:p-7 shadow-[0_16px_44px_rgba(10,32,85,0.08)] hover:border-[#1455D9]/35 hover:shadow-[0_24px_54px_rgba(10,32,85,0.13)] transition-shadow duration-300"
       >
         <article className="h-full flex flex-col justify-between">
           <div>
@@ -199,7 +214,7 @@ const InstructorCard: React.FC<{
                 aria-hidden="true"
                 className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#0A2055] via-[#1455D9] to-[#E4B052] opacity-15 group-hover:opacity-25 blur-sm transition-opacity duration-300"
               />
-              <div className="relative rounded-2xl overflow-hidden border-2 border-[#0A2055]/15 bg-[#0A2055] aspect-[4/4.2] shadow-md flex items-center justify-center">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-[#0A2055]/15 bg-[#0A2055] aspect-[4/4.3] shadow-md flex items-center justify-center">
                 {!imgError ? (
                   <img
                     src={instructor.photoPath}
@@ -379,14 +394,14 @@ export const InstructorSection: React.FC<InstructorSectionProps> = () => {
             </h2>
           </TextReveal>
           <p className="text-base sm:text-lg text-[#17233D]/80 leading-relaxed">
-            Build job-ready insurance skills under the mentorship of Mr. Parveen and Mr. Shantanu through hands-on training, live case studies, and guided career support.
+            Build job-ready insurance skills under the mentorship of Mr. Parveen, Mr. Shantanu, and Ms. Pallavi Rajput through hands-on training, live case studies, and guided career support.
           </p>
         </div>
 
-        {/* Two Instructor Cards Grid */}
+        {/* Three Instructor Cards Grid */}
         <div
           ref={cardsView.ref}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 items-stretch"
         >
           {INSTRUCTORS.map((instructor, idx) => (
             <InstructorCard
